@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package myapp;
+
+service PredictionService {
+  rpc PredictText (TextRequest) returns (TextResponse);
+}
+
+message TextRequest {
+  string text = 1;
+}
+
+message TextResponse {
+  string predicted_label = 1;
+}
