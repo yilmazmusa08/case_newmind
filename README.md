@@ -1,12 +1,21 @@
 # This Case Study repository includes all necessary files for the given scenario
 **topic_grouping.py**: Groups 'texts' by topic in the 'opinions.csv' file depending on the content utilizing 'sentence-transformers' library and 'cosine similarity'.
 
-**opinion_classification.py**: Classifies 'texts' in the 'opinions.csv' file depending on the content similarity with the given labels ['claim', 'counterclaim', 'evidence', 'rebuttal'] and stores the results into a csv file, utilizing 'Zero-Shot Classification' models from huggingface platform.
+**opinion_classification.py**: Classifies 'texts' in the 'opinions.csv' file depending on the content similarity with the given labels ['claim', 'counterclaim', 'evidence', 'rebuttal'] and stores the results into a csv file, utilizing 'Zero-Shot Classification' LLM models from huggingface platform.
+
+**conclusion_generator.py**: Utilizing the output of 'topic_grouping.py', meaningful conclusions are generated via a 'Conversation Summarizer' LLM model from huggingface models.
 
 **evaluation_type.py**: Evaluates the results of the 'opinion_pred.csv' file that contains predictions. (opinion type prediction)
+
+**opinion_type_results.csv**: 'type' predictions and actual values
+
+**topic_grouping_results.csv**: 'topic_id' predictions
+
+**conclusion_results.csv**: generated conclusion answers
 
 **server.py**: Opinion type predictor class and GRPC server.
 
 **client.py**: Predicts new data and stores it into a SQLite Database called 'myapp.db'.
 
 **myapp.db**: SQLite Database that contains predicted results
+
