@@ -4,3 +4,9 @@
 **opinion_classification.py**: Classifies 'texts' in the 'opinions.csv' file depending on the content similarity with the given labels ['claim', 'counterclaim', 'evidence', 'rebuttal'] and stores the results into a csv file, utilizing 'Zero-Shot Classification' models from huggingface platform.
 
 **evaluation_type.py**: Evaluates the results of the 'opinion_pred.csv' file that contains predictions. (opinion type prediction)
+
+**server.py**: Opinion type predictor class and GRPC server.
+
+**client.py**: Predicts new data and stores it into a SQLite Database called 'myapp.db'.
+
+**myapp.db**: SQLite Database that contains predicted results
